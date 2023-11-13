@@ -87,3 +87,6 @@ const finances = [
   ['Feb-2017', 671099],
 ];
 
+//  find out the total number of months
+var totalMonths = finances.length;
+console.log('Total months: ' + totalMonths)
