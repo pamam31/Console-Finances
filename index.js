@@ -90,3 +90,17 @@ const finances = [
 //  find out the total number of months
 var totalMonths = finances.length;
 console.log('Total months: ' + totalMonths)
+
+//total profit/loss
+var totalMonthlyDiff = 0
+
+// find out the difference between each month using a for loop, so I can access each element in the main array
+for (let i = 0; i < finances.length; i++) {
+  console.log(finances[i]); 
+  // add the second element ($$) the sub array
+  totalMonthlyDiff += finances[i][1]; 
+}
+
+//total monthly difference
+console.log("Net total: $" + totalMonthlyDiff);
+
