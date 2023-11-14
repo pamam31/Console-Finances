@@ -106,7 +106,7 @@ console.log("Net total: $" + totalMonthlyDiff);
 
 // find the average change 
 var totalChange = 0;
-var averageChange = 0;
+
 
 //to find the difference between the current month and previous month in the list, start from index 1, Feb 2010 - Jan 2010
 for (var i = 1; i < finances.length; i++) {
@@ -117,7 +117,7 @@ for (var i = 1; i < finances.length; i++) {
 }
 
 // find the average: totalChange/ (totalMonths - 1)
-averageChange = (totalChange / (totalMonths - 1));
+var averageChange = (totalChange / (totalMonths - 1));
 console.log('Average Change: ' + '$' + averageChange.toFixed(2))
 
 // find which month has the greatest difference for profit print month and amount, (using same monthly var difference above)
@@ -127,9 +127,9 @@ console.log('Average Change: ' + '$' + averageChange.toFixed(2))
 
 var greatestMonthlyDifference = ['', 0]
 var greatestMonthlyLoss = ['', 0];
-var monthlyDifference = 0
 
 
+// this for loop starts at index 1 and if the condition is true it will loop through the if statements until it is true
 for (var i = 1; i < finances.length; i++) {
   var currentMonth = finances[i][0]; 
   var monthlyDifference = finances[i][1] - finances[i-1][1];
@@ -140,10 +140,9 @@ for (var i = 1; i < finances.length; i++) {
   } 
   if (monthlyDifference <= greatestMonthlyLoss[1]) {
     greatestMonthlyLoss = [currentMonth, monthlyDifference]; 
-    // Ask tutor how to add brackets and $ sign
   }
 }
 
-console.log('Greatest Loss: ' + greatestMonthlyLoss)
-console.log('Greatest Increase in Profits: ' + greatestMonthlyDifference);
+console.log('Greatest Loss: ' + greatestMonthlyLoss[0] + ' ($' + greatestMonthlyLoss[1] + ')')
+console.log('Greatest Increase in Profits: ' + greatestMonthlyDifference[0] + ' $' + greatestMonthlyDifference[1]); //helped from tutor Juan Torres to add the $ symbol and brackets
 
