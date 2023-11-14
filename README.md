@@ -8,7 +8,7 @@ Javascript was used to analyse and calculate a dataset composed a multidimension
 * Period with the greatest loss and greatest profit
 
 The results are then printed in the console as shown in the image below:
-![Alt text](<Images/Screenshot 2023-11-13 at 00.28.46.png>)
+![Alt text](<Images/Screenshot 2023-11-14 at 12.40.28.png>)
 
 ## Installation
 N/A
